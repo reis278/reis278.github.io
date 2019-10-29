@@ -1,0 +1,99 @@
+body{
+    background-image: url(../img/GIF/gif1.gif);
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* img back */
+
+.back_img{
+    top: 0%;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* botões */
+
+.div_buttons{
+    margin: 40vh 10vw 0vh 77vw;
+    display: block;
+}
+
+.div_buttons button{
+    width: 80%;
+    margin: 10px;
+    background-color: #7d7d7d;
+    border-radius: 50px;
+    border-color: #C0C0C0;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.btn_login{
+    padding: 10px;
+    outline: none;
+}
+.btn_cadastro{
+    padding: 10px;
+    outline: none;
+}
+
+
+/* caixa de texto login */
+
+/* cadastro */
+
+.div_cadastro{
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20vh 10vw 0vh 70vw;
+    text-align: center;
+    width: 20%;
+}
+
+.div_cadastro input{
+    background: transparent;
+    border: transparent;
+    outline: none;
+    margin: 15px 15px 15px 15px;
+    text-align: center;
+}
+
+.div_cadastro input:focus{
+    font-weight: bold;
+}
+
+/* div login */
+.div_login input:focus{
+    font-weight: bold;
+}
+
+
+.div_login{
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 32vh 10vw 0vh 70vw;
+    text-align: center;
+    width: 20%;
+}
+
+.div_login input{
+    background: transparent;
+    border: transparent;
+    outline: none;
+    margin: 15px 15px 15px 15px;
+    text-align: center;
+}
+
+
+legend{
+    color: black;
+    margin-top: 10px;
+}
+

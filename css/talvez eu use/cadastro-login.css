@@ -1,0 +1,193 @@
+body{
+    background-color: #333;
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.div_logo{
+    margin: -1% 75% 0% 12%; 
+    position: absolute;
+}
+
+/* tela de cadastro  ------------------------------------------------------------------------*/
+.cadastro{
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 550px;
+    padding: 2%;
+    background-color: white;
+    margin-top: 20px;
+    margin-right: 280px;
+    margin-left: 280px;
+}
+
+.cadastro button{
+    border-radius: 10px;
+    background-color: white;
+    border: solid #333;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    height: 10vh;
+    margin: -29% 0% 3% 44%;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.cadastro button:active{
+    background-color: #333;
+    color: white;
+    box-shadow: 1px 1px gray;
+    transform: translateY(4px);
+}
+
+.div_cadastro{
+    border-radius: 15px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: -10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.div_cadastro input{
+    padding: 6px;
+    margin: 5px;
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    border: transparent;
+    text-transform: capitalize;
+}
+
+.div_cadastro input:focus{
+    outline: none;
+    color: black;
+    font-weight: bold;
+}
+
+.cadastro h1{
+    text-align: center;
+    margin: -2% 10% 0% 10%;
+}
+
+#senha_input{
+    text-transform: none;
+}
+#confirmarS_input{
+    text-transform: none;
+}
+
+.cadastro input:focus{
+    outline: none;
+}
+
+.cadastro button:active{
+    box-shadow: 1px;
+    transform: 0 1px translateY(5px);
+}
+
+.field_cadastro button:hover{
+    background-color: gray;
+    color: white;
+}
+
+/* tela de login -------------------------------------------------------------------------- */
+.login{
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 5px black;
+    padding: 1%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
+}
+
+.login input{
+    padding: 2px;
+    background-color: transparent;
+    color: black;
+    border: transparent;
+}
+
+.login input::placeholder{
+    color: black;
+}
+
+.login input:focus{
+    outline: none;
+    color: black;
+    font-weight: bold;
+}
+
+.login button{
+    border-radius: 10px;
+    background-color: white;
+    border: solid #333;
+    color: black;
+    outline: none;
+    cursor: pointer;
+    height: 10vh;
+    box-shadow: 2px 2px 2px 2px gray;
+    
+}
+
+.login button:active{
+    background-color: #333;
+    color: white;
+    box-shadow: 1px 1px gray;
+    transform: translateY(4px);
+}
+
+.login_email{
+    border-radius: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.login_senha{
+    border-radius: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.login legend{
+    text-align: center;
+}
+
+legend{
+    color: black;
+    font-weight: bold;
+    border: transparent;
+}
+
+.img{
+    display: inline-block;
+    margin-top: 6px;
+}
+
+/* nav bar ------------------------------------------------------------------------------ */
+
+/* #navbar{
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#navbar a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar:hover{
+    background-color: gray;
+} */
+
+.sticky{
+    position: sticky;
+    top: 0;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/button-animation.css">
+    <link rel="shortcut icon" href="img/logobar.png" type="image/x-icon">
+    <title>TechDigital</title>
+</head>
+
+<body>
+    <div class="div_img_logo"></div>
+    <div class="div_buttons" id="div_buttons">
+        <button class="btn_login" onclick="login()"><span>Login</span></button>
+        <button class="btn_cadastro" onclick="cadastro()"><span>Cadastro</span></button>
+    </div>
+
+    <div class="div_login" id="div_login1">
+        <div class="back_img"><img onclick="backarrow()" src="../img/icones/restart.png" height="40px"></div>
+        <div class="style_account">
+            <legend>Nick</legend>
+            <input type="text" id="login_input_login" placeholder="Clique aqui">
+            <legend>Senha</legend>
+            <input type="password" id="senha_input_login" placeholder="Clique aqui"><Br>
+            <button onclick="logar()"><span class="style_span">Logar</span></button>
+        </div>
+    </div>
+    
+    <div class="div_cadastro" id="div_idcadastro">
+        <div class="back_img"><img onclick="backarrow()" src="../img/icones/restart.png" height="40px"></div>
+        <div class="style_account">
+            <legend>Nome Completo</legend>
+            <input type="text" id="nome_input_cadastro" placeholder="Clique aqui">
+            <legend>Nick</legend>
+            <input type="text" id="nick_input_cadastro" placeholder="Clique aqui">
+            <legend>Email</legend>
+            <input type="text" id="nome_input_cadastro" placeholder="Clique aqui">
+            <legend>Senha</legend>
+            <input type="text" id="nome_input_cadastro" placeholder="Clique aqui">
+            <legend>Confirmar senha</legend>
+            <input type="text" id="senha_input_login" placeholder="Clique aqui"><Br>
+            <button onclick="cadastrar()"><span>Cadastrar-se</span></button>
+        </div>
+        
+    </div>
+    <script src="../js/account/account.js"></script>
+</body>
+
+</html>

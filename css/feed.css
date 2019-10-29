@@ -1,0 +1,28 @@
+#feed{
+    height: 100px;
+    margin: -10px 15vw -10vh 15vw;
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'BebasNeueRegular';
+}
+
+.cFeed{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    margin-top: -220px;
+    margin-left: 40px;
+    font-family: 'BebasNeueRegular';
+}
+
+.cFeed1{
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    margin-top: -480px;
+    margin-left: 40px;
+    font-family: 'BebasNeueRegular';
+}

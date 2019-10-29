@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html onplaying="" id="html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/div-noticias.css">
+    <link rel="stylesheet" href="css/feed.css">
+    <link rel="shortcut icon" href="img/logobar.png" type="image/x-icon">
+    <title>Bem vindo</title>
+</head>
+
+<body onhashchange="startUp()">
+
+    <div id="navbar">
+        <a onclick="ativo_inicio()" style="height: 40px" href="#i"><img id="logo" src="img/logo-novo.png" height="40"></a>
+        <div class="opcoes">
+            <a class="l" onclick="oneFunction(this)" href="#n">INFORMÁTICA</a>
+            <a class="l" onclick="oneFunction(this)" href="#j">JOGOS E CULTURA</a>
+            <a class="l" onclick="oneFunction(this)" href="#c">CIÊNCIA</a>
+            <div id="pesquisa_div">
+                <input type="text" id="pesquisa_input" placeholder="pesquise aqui">
+                <label onclick="pesquisar()" for="search_active" class="l" id="pesquisa_label"><img class="search" height="35" src="img/icones/search.png" alt=""><img src="img/icones/rectangle.png" alt="" height="55"></label>
+            </div>
+            <input type="checkbox" id="search_active">
+            <a class="opcao_login" onclick="openUser()">CONTA</a>
+        </div>
+    </div>
+    <div class="div_user" id="user" style="display: none" on="closeUser()">
+        <div class="topbar_user">
+            <img onclick="logout()" height="30px" class="logout_img" src="img/user/logout.png" alt="">
+            <img onclick="closeUser()" height="25px" class="exit_img" src="img/user/close.png" alt=""></div>
+        <div class="user_logado">
+            <img src="img/userAntigo/user.png" alt="" height="40">
+            <h1 id="user_logado">Rafael Reis</h1>
+        </div>
+    </div>
+    <div id="feed">
+        <p>Destaques</p>
+    </div>
+    <div id="noticias_bl" style="display: none;">
+        <div class="div_maior">
+            <div class="noticia1" id="div_n1">
+            </div>
+            <div class="div_direita_background">
+                <div class="noticia2_direita_cima" id="div_n2">
+                </div>
+                <div class="noticia3_direita_baixo" id="div_n3">
+                    <div class="div_img_noticia3"></div>
+                </div>
+            </div>
+        </div>
+        <div id="div_noticia"></div>
+    </div>
+    
+    <script src="js/noticias.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/account/account.js"></script>
+</body>
+
+</html>

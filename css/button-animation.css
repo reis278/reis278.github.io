@@ -1,0 +1,58 @@
+.style_account button{
+    margin: 10px;
+    border-radius: 10px;
+    width: 70%;
+    outline: none;
+    cursor: pointer;
+}
+
+.style_account button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 500ms;
+}
+
+.style_account button:hover span{
+    padding-right: 25px;
+}
+
+.style_account button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    margin-top: -1px;
+    right: -20px;
+    transition: 500ms;
+}
+
+.style_account button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.div_buttons button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 500ms;
+    color: white;
+}
+
+.div_buttons button:hover span{
+    padding-right: 25px;
+}
+
+.div_buttons button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    margin-top: -1px;
+    right: -20px;
+    transition: 500ms;
+}
+
+.div_buttons button:hover span:after{
+    opacity: 1;
+    right: 0;
+}

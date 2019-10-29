@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/noticia.css">
+    <link rel="stylesheet" href="../../css/home.css">
+    <link rel="shortcut icon" href="../../img/logobar.png" type="image/x-icon">
+    <title>Noticia</title>
+</head>
+
+<body>
+    <div id="navbar">
+            <a onclick="ativo_inicio()" style="height: 40px" href="../../index.html" href="#i"><img id="logo" src="../../img/logo-novo.png" height="40"></a>
+            <div class="opcoes">
+                <a class="l" href="../../index.html#n">INFORMÁTICA</a>
+                <a class="l" href="../../index.html#j">JOGOS E CULTURA</a>
+                <a class="l" href="../../index.html#c">CIÊNCIA</a>
+                <div id="pesquisa_div">
+                    <input type="text" id="pesquisa_input" placeholder="pesquise aqui">
+                    <label onclick="pesquisar()" for="search_active" class="l" id="pesquisa_label"><img class="search" height="40" src="../../img/icones/search.png" alt=""><img src="../../img/icones/rectangle.png" alt="" height="55"></label>
+                </div>
+                <input type="checkbox" id="search_active">
+                <a class="opcao_login" onclick="openUser()">CONTA</a>
+            </div>
+    </div>
+    <div class="div_total">
+        <div class="img_noticia" id="img">
+        </div>
+        <div onclick="downFunction()" id="p_titulo_div" class="p_titulo_div">
+            <h1 id="p_titulo"></h1>
+            <p id="p_data"></p>
+            <p><i id="arrow" class="up"></i></p>
+        </div>
+    </div>
+
+    <div id="p_materia" class="p_materia">
+        <h1 id="p_texto"></h1>
+        <p id="p_conteudo"></p>
+    </div>
+    <button onclick="topFunction()" id="topBtn" title="Ir para cima"><i class="up_btn"></i></button>
+
+    <script src="../../js/noticias.js"></script>
+    <script src="../../js/page_noticias.js"></script>
+
+</body>
+
+</html>
