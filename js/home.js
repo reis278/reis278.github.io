@@ -48,7 +48,6 @@ function pesquisar() {
     
 }
 
-var conteudo;
 
 var http = new XMLHttpRequest();
     http.open('get', 'http://localhost:3000/api', true);
@@ -57,7 +56,7 @@ var http = new XMLHttpRequest();
     http.onload = function () {
         
         var response = http.responseText;
-        conteudo = response;
+        
     }
     
     http.send();

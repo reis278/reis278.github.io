@@ -27,14 +27,18 @@ request('https://g1.globo.com/economia/tecnologia/', function(err, res, body){
         console.log('MATERIA ' + feedpost);
 
         var data = {
-            "informática":{
-                "img"
-            }
+            "informática":[
+                {
+                    "img": img,
+                    "titulo": title,
+                    "materia": feedpost
+                }
+            ]
         }
 
-        materias += `<img src="${img}">`;
-        materias += '<h2>Titulo: ' + title + '</h2>';
-        materias += '<p>Matéria: ' + feedpost + '</p>';
+        // materias += `<img src="${img}">`;
+        // materias += '<h2>Titulo: ' + title + '</h2>';
+        // materias += '<p>Matéria: ' + feedpost + '</p>';
     });
 });
 
