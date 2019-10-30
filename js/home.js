@@ -48,11 +48,21 @@ function pesquisar() {
     
 }
 
-// document.onclick = function(e){
-//     if(!pesquisa_div.contains(e.target)){
-//         pesquisa_div.classList.remove('active');
-//     }
-// };
+var conteudo;
+
+var http = new XMLHttpRequest();
+    http.open('get', 'http://localhost:3000/api', true);
+    //http.withCredentials = true;
+    
+    http.onload = function () {
+        
+        var response = http.responseText;
+        conteudo = response;
+    }
+    
+    http.send();
+
+
 // pegando o vetor do arquivos noticias.js
 
 function carregarVetorIncial(vetorN, vetorJ, vetorC) {
