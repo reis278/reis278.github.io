@@ -52,7 +52,7 @@ function pesquisar() {
 function carregaInformatica() {
 
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/api', true);
+    http.open('get', 'http://localhost:3000/info', true);
 
 
     http.onload = function () {
@@ -69,7 +69,7 @@ function carregaInformatica() {
 function carregaJogos() {
 
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/api', true);
+    http.open('get', 'http://localhost:3000/jogos', true);
 
 
     http.onload = function () {
@@ -83,7 +83,7 @@ function carregaJogos() {
 function carregaCiencia() {
 
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/api', true);
+    http.open('get', 'http://localhost:3000/ciencia', true);
 
 
     http.onload = function () {
