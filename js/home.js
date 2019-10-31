@@ -46,7 +46,6 @@ function pesquisar() {
     } else {
         pesquisa_div.classList.remove('active');
     }
-
 }
 
 function carregaInformatica() {
