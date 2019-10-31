@@ -61,7 +61,11 @@ function carregaInformatica() {
     }
 
     http.send();
+
+    carregarVetor(data.informatica);
+
 }
+
 function carregaJogos() {
 
     var http = new XMLHttpRequest();
@@ -75,6 +79,7 @@ function carregaJogos() {
 
     http.send();
 }
+
 function carregaCiencia() {
 
     var http = new XMLHttpRequest();
@@ -88,7 +93,6 @@ function carregaCiencia() {
 
     http.send();
 }
-
 
 
 function carregarVetorIncial(vetorN, vetorJ, vetorC) {
@@ -195,7 +199,6 @@ function startUp() {
 
     if (idUrl == '#n') {
         carregaInformatica();
-        carregarVetor(data.informatica);
         document.title = 'Informática';
     }
     if (idUrl == '#j') {
@@ -207,7 +210,7 @@ function startUp() {
         document.title = 'Ciencia';
     }
     if (idUrl == '#i') {
-        carregarVetorIncial(data.informatica, data.jogos, data.ciencia)
+        carregarVetorIncial(data.informatica, data.jogos, data.ciencia);
         document.title = 'Tela Inicial';
     }
 
