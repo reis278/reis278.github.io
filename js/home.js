@@ -1,3 +1,4 @@
+var json;
 
 // navbar acompanhando o scroll
 var navbar = document.getElementById('navbar');
@@ -45,22 +46,49 @@ function pesquisar() {
     } else {
         pesquisa_div.classList.remove('active');
     }
-    
+
 }
 
+function carregaInformatica() {
 
-var http = new XMLHttpRequest();
-http.open('get', 'http://localhost:3000/api', true);
+    var http = new XMLHttpRequest();
+    http.open('get', 'http://localhost:3000/api', true);
 
 
-http.onload = function () {
-    
-    var response = http.responseText;
+    http.onload = function () {
+
+        json = JSON.parse(http.responseText);
+    }
+
+    http.send();
+}
+function carregaJogos() {
+
+    var http = new XMLHttpRequest();
+    http.open('get', 'http://localhost:3000/api', true);
+
+
+    http.onload = function () {
+
+        json = JSON.parse(http.responseText);
+    }
+
+    http.send();
+}
+function carregaCiencia() {
+
+    var http = new XMLHttpRequest();
+    http.open('get', 'http://localhost:3000/api', true);
+
+
+    http.onload = function () {
+
+        json = JSON.parse(http.responseText);
+    }
+
+    http.send();
 }
 
-http.send();
-
-response["titulo"];
 
 
 function carregarVetorIncial(vetorN, vetorJ, vetorC) {
@@ -104,26 +132,26 @@ function carregarVetor(vetor) {
 
     var contador = 0;
     // verificando em qual página está para trazer a noticia
-    while (contador < vetor.length) {
+    while (contador < json.length) {
 
-        var cImagem = vetor[contador].img;
-        var cTitulo = vetor[contador].titulo;
-        var cTexto = vetor[contador].texto;
+        var cImagem = json[contador].imagem;
+        var cTitulo = json[contador].titulo;
+        var cTexto = json[contador].materia;
 
         if (contador < 3) {
 
             if (contador == 0) {
-                div_n1.innerHTML = `<div class="div_img_noticia" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('img/noticias/${cImagem}')"></div>
+                div_n1.innerHTML = `<div class="div_img_noticia" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('${cImagem}')"></div>
             <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p>`;
             }
 
             if (contador == 1) {
-                div_n2.innerHTML = `<div class="div_img_noticia2" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('img/noticias/${cImagem}')"></div>
+                div_n2.innerHTML = `<div class="div_img_noticia2" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('${cImagem}')"></div>
             <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p>`;
             }
 
             if (contador == 2) {
-                div_n3.innerHTML = `<div class="div_img_noticia3" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('img/noticias/${cImagem}')"></div>
+                div_n3.innerHTML = `<div class="div_img_noticia3" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('${cImagem}')"></div>
                 <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p>`;
             }
 
@@ -131,7 +159,7 @@ function carregarVetor(vetor) {
 
             // setando informações de noticias na tela
             div_noticia.innerHTML += `<div class="noticia1_1" destaque="a" idnoticia="${contador}" onclick="noticia(this)">
-            <div><img class="div_img1" src="img/noticias/${cImagem}" alt=""></div>
+            <div><img class="div_img1" src="${cImagem}" alt=""></div>
             <div class="noticia_page1"><p class="p_titulo">${cTitulo}</p>
             <p class="p_texto">${cTexto}</p>
             <div class="seta"><img src='img/icones/next.png' height="50px"></div></div >`;
@@ -145,12 +173,12 @@ function carregarVetor(vetor) {
 
 function noticia(e) {
     var idUrl = window.location.hash;
-    
+
     // ao clicar numa noticia, pegar o atributo da div com o vetor e guardar
     var idnoticia = e.getAttribute('idnoticia');
     // var destaque = e.getAttribute('destaque');
 
-        window.location.href = !idUrl.startsWith('#i')? `html/noticias/noticia.html${idUrl}${idnoticia}`: `html/noticias/noticia.html${idnoticia}`;
+    window.location.href = !idUrl.startsWith('#i') ? `html/noticias/noticia.html${idUrl}${idnoticia}` : `html/noticias/noticia.html${idnoticia}`;
     // atribuir a posição do vetor a URL
 }
 
@@ -166,6 +194,7 @@ function startUp() {
     oneFunction(link);
 
     if (idUrl == '#n') {
+        carregaInformatica();
         carregarVetor(data.informatica);
         document.title = 'Informática';
     }

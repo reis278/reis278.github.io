@@ -22,11 +22,12 @@
 
     http.onload = function () {
 
-        var response = http.responseText;
+        var json = JSON.parse(http.responseText);
+        // var json = http.responseText;
+        div.innerHTML += JSON.stringify(json);
     }
 
     http.send();
 
-    div.innerHTML = response["titulo"];
 
 </script>
