@@ -12,6 +12,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 var materias = "";
+var data = "";
 
 request('https://g1.globo.com/economia/tecnologia/', function(err, res, body){
     if(err) console.log('Erro' + err);
@@ -26,21 +27,14 @@ request('https://g1.globo.com/economia/tecnologia/', function(err, res, body){
         console.log('titulo ' + title);
         console.log('MATERIA ' + feedpost);
 
-        var data = {
-            "informática":[
-                {
-                    "img": img,
-                    "titulo": title,
-                    "materia": feedpost
-                }
-            ]
-        }
-
-        // materias += `<img src="${img}">`;
-        // materias += '<h2>Titulo: ' + title + '</h2>';
-        // materias += '<p>Matéria: ' + feedpost + '</p>';
+        data = {"imagem": img, "titulo": title, "materia": feedpost}
+        
+        materias += `<img src="${img}">`;
+        materias += '<h2>Titulo: ' + title + '</h2>';
+        materias += '<p>Matéria: ' + feedpost + '</p>';
     });
 });
+
 
 app.get('/api', function (req, res) {
 

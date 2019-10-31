@@ -50,19 +50,18 @@ function pesquisar() {
 
 
 var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/api', true);
-    //http.withCredentials = true;
-    
-    http.onload = function () {
-        
-        var response = http.responseText;
-        
-    }
-    
-    http.send();
+http.open('get', 'http://localhost:3000/api', true);
 
 
-// pegando o vetor do arquivos noticias.js
+http.onload = function () {
+    
+    var response = http.responseText;
+}
+
+http.send();
+
+response["titulo"];
+
 
 function carregarVetorIncial(vetorN, vetorJ, vetorC) {
     div_n1.innerHTML = '';
@@ -74,8 +73,6 @@ function carregarVetorIncial(vetorN, vetorJ, vetorC) {
     feed.style.display = 'block';
 
     var contador = 0;
-
-    // Math.random
 
     var nImagem = vetorN[contador].img;
     var jImagem = vetorJ[contador].img;
@@ -181,7 +178,6 @@ function startUp() {
         document.title = 'Ciencia';
     }
     if (idUrl == '#i') {
-        // ativo_inicio();
         carregarVetorIncial(data.informatica, data.jogos, data.ciencia)
         document.title = 'Tela Inicial';
     }
