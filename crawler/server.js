@@ -29,8 +29,9 @@ request('https://g1.globo.com/economia/tecnologia/', function (err, res, body) {
         var img = $(this).find('.bstn-fd-picture-image').attr('src');
         var title = $(this).find('.feed-post-body-title').text().trim();
         var feedpost = $(this).find('.feed-post-body-resumo').text().trim();
+        var font = 'G1 Globo Tecnologia'
 
-        info.push({ "imagem": img, "titulo": title, "materia": feedpost });
+        info.push({ "imagem": img, "titulo": title, "materia": feedpost, "fonte": font});
     });
     console.log('Rodando...');
 });
