@@ -108,6 +108,7 @@ function carregarVetorIncial(vetorN, vetorJ, vetorC) {
     var nImagem = vetorN[contador].img;
     var jImagem = vetorJ[contador].img;
     var cImagem = vetorC[contador].img;
+    
     var nTitulo = vetorN[contador].titulo;
     var jTitulo = vetorJ[contador].titulo;
     var cTitulo = vetorC[contador].titulo;
