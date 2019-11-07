@@ -60,9 +60,8 @@ function carregaInformatica() {
     }
 
     http.send();
-    
-    carregarVetor(data.informatica);
 
+    carregarVetor(data.informatica);
 }
 
 function carregaJogos() {
@@ -152,12 +151,12 @@ function carregarVetor(vetor) {
 
             if (contador == 1) {
                 div_n2.innerHTML = `<div class="div_img_noticia2" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('${cImagem}')"></div>
-            <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p>`;
+            <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p><p class='fonte'>${cFonte}</p>`;
             }
 
             if (contador == 2) {
                 div_n3.innerHTML = `<div class="div_img_noticia3" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('${cImagem}')"></div>
-                <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p>`;
+                <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p><p class='fonte'>${cFonte}</p>`;
             }
 
         } else {
@@ -165,9 +164,10 @@ function carregarVetor(vetor) {
             // setando informações de noticias na tela
             div_noticia.innerHTML += `<div class="noticia1_1" destaque="a" idnoticia="${contador}" onclick="noticia(this)">
             <div><img class="div_img1" src="${cImagem}" alt=""></div>
-            <div class="noticia_page1"><p class="p_titulo">${cTitulo}</p>
+            <div class="noticia_page1"><p class='fonte_n'>${cFonte}</p>
+            <p class="p_titulo">${cTitulo}</p>
             <p class="p_texto">${cTexto}</p>
-            <div class="seta"><img src='img/icones/next.png' height="50px"></div></div >`;
+            <div class="seta"><img src='img/icones/next.png' height="50px"></div></div>`;
         }
         contador++;
     }
@@ -217,9 +217,5 @@ function startUp() {
 
 }
 
-
 startUp();
-carregaInformatica();
-carregaJogos();
-carregaciencia();
 

@@ -48,7 +48,7 @@
 }
 
 .fonte{
-    bottom: 500px;
+    top: -10px;
 }
 
 /* noticia 2 */
@@ -136,8 +136,12 @@
     cursor: pointer;
     float: left;
     transition: 900ms;
-    width: 70%;
+    width: 75%;
     opacity: 0.8;
+}
+
+.fonte_n{
+    margin-left: 20px;
 }
 
 .seta{
@@ -175,7 +179,7 @@
     font-size: 25px;
     font-weight: bold;
     font-family: 'Roboto Slab', serif;
-    margin: 3vh;
+    margin: 0 25px -10px 20px ;
     max-width: 600px;
 }
 
@@ -187,7 +191,7 @@
 
 .div_img1{
     height: 200px;
-    width: 300px;
+    width: 350px;
     border-radius: 7px 0 0 7px;
 }
 
