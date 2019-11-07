@@ -141,12 +141,13 @@ function carregarVetor(vetor) {
         var cImagem = json[contador].imagem;
         var cTitulo = json[contador].titulo;
         var cTexto = json[contador].materia;
+        var cFonte = json[contador].fonte;
 
         if (contador < 3) {
 
             if (contador == 0) {
                 div_n1.innerHTML = `<div class="div_img_noticia" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('${cImagem}')"></div>
-            <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p>`;
+            <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p><p>${cFonte}</p>`;
             }
 
             if (contador == 1) {
