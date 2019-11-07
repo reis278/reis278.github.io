@@ -60,7 +60,7 @@ function carregaInformatica() {
     }
 
     http.send();
-
+    
     carregarVetor(data.informatica);
 
 }
@@ -108,7 +108,7 @@ function carregarVetorIncial(vetorN, vetorJ, vetorC) {
     var nImagem = vetorN[contador].img;
     var jImagem = vetorJ[contador].img;
     var cImagem = vetorC[contador].img;
-    
+
     var nTitulo = vetorN[contador].titulo;
     var jTitulo = vetorJ[contador].titulo;
     var cTitulo = vetorC[contador].titulo;
@@ -147,7 +147,7 @@ function carregarVetor(vetor) {
 
             if (contador == 0) {
                 div_n1.innerHTML = `<div class="div_img_noticia" idnoticia="${contador}" onclick="noticia(this)" style="background-image: url('${cImagem}')"></div>
-            <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p><p>${cFonte}</p>`;
+            <p idnoticia="${contador}" onclick="noticia(this)">${cTitulo}</p><p class='fonte'>${cFonte}</p>`;
             }
 
             if (contador == 1) {
@@ -217,4 +217,9 @@ function startUp() {
 
 }
 
+
 startUp();
+carregaInformatica();
+carregaJogos();
+carregaciencia();
+
