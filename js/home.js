@@ -20,13 +20,10 @@ function myfunction() {
     }
 }
 
-var div_ap = document.getElementById('limite');
-var pa = div_ap.offsetTop;
-
 var mybutton = document.getElementById("topBtn");
 
 function scrollFunction() {
-  if (document.body.scrollTop >= pa|| document.documentElement.scrollTop >= pa) {
+  if (document.body.scrollTop >= 400|| document.documentElement.scrollTop >= 400) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
