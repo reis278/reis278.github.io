@@ -8,6 +8,7 @@ var sticky = navbar.offsetTop;
 
 window.onscroll = function () {
     myfunction();
+    scrollFunction();
 }
 
 // verificando a posicao fa navbar em relação a tela e mandando seguir a rolagem
@@ -19,6 +20,23 @@ function myfunction() {
     }
 }
 
+var div_ap = document.getElementById('limite');
+var pa = div_ap.offsetTop;
+
+var mybutton = document.getElementById("topBtn");
+
+function scrollFunction() {
+  if (document.body.scrollTop >= pa|| document.documentElement.scrollTop >= pa) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 // -----------
 
@@ -51,7 +69,7 @@ function pesquisar() {
 function carregaInformatica() {
 
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/info', true);
+    http.open('get', 'http://techdigital-reis278-com-br.umbler.net/info', true);
 
 
     http.onload = function () {
@@ -67,7 +85,7 @@ function carregaInformatica() {
 function carregaJogos() {
 
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/jogos', true);
+    http.open('get', 'http://techdigital-reis278-com-br.umbler.net/jogos', true);
 
 
     http.onload = function () {
@@ -78,10 +96,11 @@ function carregaJogos() {
     http.send();
 }
 
+
 function carregaCiencia() {
 
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/ciencia', true);
+    http.open('get', 'http://techdigital-reis278-com-br.umbler.net/ciencia', true);
 
 
     http.onload = function () {

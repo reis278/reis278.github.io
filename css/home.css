@@ -203,3 +203,24 @@ a:hover{
 .user_logado{
     margin-top: 40px;
 }
+
+
+#topBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 22px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #4bd7c8; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px;
+}
+  
+  #topBtn:hover {
+    background-color: #333;
+    color: #4bd7c8; 
+  }
