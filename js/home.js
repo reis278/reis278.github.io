@@ -23,7 +23,7 @@ function myfunction() {
 var mybutton = document.getElementById("topBtn");
 
 function scrollFunction() {
-  if (document.body.scrollTop >= 400|| document.documentElement.scrollTop >= 400) {
+  if (document.body.scrollTop >= 400 || document.documentElement.scrollTop >= 400) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -72,11 +72,11 @@ function carregaInformatica() {
     http.onload = function () {
 
         json = JSON.parse(http.responseText);
+        carregarVetor();
     }
-
+    
     http.send();
 
-    carregarVetor(data.informatica);
 }
 
 function carregaJogos() {
@@ -139,7 +139,7 @@ function carregarVetorIncial(vetorN, vetorJ, vetorC) {
 
 }
 
-function carregarVetor(vetor) {
+function carregarVetor() {
 
     div_n1.innerHTML = '';
     div_n2.innerHTML = '';
@@ -151,8 +151,8 @@ function carregarVetor(vetor) {
 
     var contador = 0;
     // verificando em qual página está para trazer a noticia
-    while (contador < json.length) {
-
+    while (contador < json.length) {    
+        
         var cImagem = json[contador].imagem;
         var cTitulo = json[contador].titulo;
         var cTexto = json[contador].materia;
@@ -219,7 +219,13 @@ function startUp() {
         document.title = 'Informática';
     }
     if (idUrl == '#j') {
-        carregarVetor(data.jogos);
+        alert('outra coisa');
+        div_n1.innerHTML = '';
+        div_n2.innerHTML = '';
+        div_n3.innerHTML = '';
+        div_noticia.innerHTML = '';
+
+        // carregarVetor(data.jogos);
         document.title = 'Jogos';
     }
     if (idUrl == '#c') {
@@ -233,5 +239,12 @@ function startUp() {
 
 }
 
+// window.onload = () => {
+//     startUp();
+//     carregaInformatica();
+// }
+
 startUp();
+
+
 
