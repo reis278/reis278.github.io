@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+}
+
+#texto{
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    height: 250px;
+}
+
+.btnEntrar{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    top: 500px;
+}
+
+.ct{
+    text-align: center;
+    margin-top: 100px;
+}

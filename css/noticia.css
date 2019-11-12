@@ -6,7 +6,7 @@
 .img_noticia{
     width: 100.1%;
     /* height: 670px; */
-    height: 101.5vh;
+    height: 110.5vh;
     background-size: 100%;
     background-repeat: no-repeat;
     color: white;
@@ -59,8 +59,8 @@
 **/
 
 .up {
-    margin-bottom: 20px;
-    margin-top: 150px;
+    margin-bottom: 40px;
+    margin-top: 140px;
     border: 2px solid white;
     border-width: 0 7px 7px 0;
     display: inline-block;
