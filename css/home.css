@@ -6,6 +6,7 @@ body{
     background-image: url(../img/fundos/bkg.jpg);
     background-size: cover;
     background-attachment: fixed;
+    cursor: url(../img/cursor/GrayGlowingCursor.cur), default;
     z-index: -1;
 }   
 
