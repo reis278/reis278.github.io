@@ -89,16 +89,16 @@ function carregaInformatica() {
 
 }
 
-// function carregaMateriaInformatica(nId) {
+function carregaMateriaInformatica(nId) {
 
-//     var idnoticia = nId.getAttribute('idnoticia');
+    var idnoticia = nId.getAttribute('idnoticia');
 
-//     var http = new XMLHttpRequest();
-//     http.open('post', 'http://localhost:3000/minfo', true);
-//     http.send("link=" + idnoticia);
+    var http = new XMLHttpRequest();
+    http.open('post', 'http://localhost:3000/minfo', true);
+    http.send("link=" + idnoticia);
 
-//     window.location.href = idnoticia;
-// }
+    window.location.href = idnoticia;
+}
 
 
 // função para pegar a resposta do servidor que traz as noticias e guardar em um vetor
