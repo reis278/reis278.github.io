@@ -76,7 +76,7 @@ var json;
 function carregaInformatica() {
     // pegando a resposta do servidor
     var http = new XMLHttpRequest();
-    http.open('get', 'http://techdigital-reis278-com-br.umbler.net/info', true);
+    http.open('get', 'http://localhost:3000/info', true);
 
     // assim que chegar ele pega e carrega a função que chama o vetor com as noticias
     http.onload = function () {
