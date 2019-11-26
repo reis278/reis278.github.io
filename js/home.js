@@ -76,7 +76,7 @@ var json;
 function carregaInformatica() {
     // pegando a resposta do servidor
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/info', true);
+    http.open('get', 'http://techdigital-reis278-com-br.umbler.net/info', true);
 
     // assim que chegar ele pega e carrega a função que chama o vetor com as noticias
     http.onload = function () {
@@ -89,16 +89,16 @@ function carregaInformatica() {
 
 }
 
-function carregaMateriaInformatica(nId) {
+// function carregaMateriaInformatica(nId) {
 
-    var idnoticia = nId.getAttribute('idnoticia');
+//     var idnoticia = nId.getAttribute('idnoticia');
 
-    var http = new XMLHttpRequest();
-    http.open('post', 'http://localhost:3000/minfo', true);
-    http.send("link=" + idnoticia);
+//     var http = new XMLHttpRequest();
+//     http.open('post', 'http://localhost:3000/minfo', true);
+//     http.send("link=" + idnoticia);
 
-    window.location.href = idnoticia;
-}
+//     window.location.href = idnoticia;
+// }
 
 
 // função para pegar a resposta do servidor que traz as noticias e guardar em um vetor
