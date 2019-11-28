@@ -106,12 +106,13 @@ function carregaJogos() {
 
     // pegando a resposta do servidor
     var http = new XMLHttpRequest();
-    http.open('get', 'http://techdigital-reis278-com-br.umbler.net/jogos', true);
+    http.open('get', 'http://localhost:3000/jogos', true);
 
     // assim que chegar ele pega e carrega a função que chama o vetor com as noticias
     http.onload = function () {
 
         json = JSON.parse(http.responseText);
+        carregarVetor();
     }
 
     http.send();
@@ -121,12 +122,13 @@ function carregaJogos() {
 function carregaCiencia() {
     // pegando a resposta do servidor
     var http = new XMLHttpRequest();
-    http.open('get', 'http://techdigital-reis278-com-br.umbler.net/ciencia', true);
+    http.open('get', 'http://localhost:3000/ciencia', true);
 
     // assim que chegar ele pega e carrega a função que chama o vetor com as noticias
     http.onload = function () {
 
         json = JSON.parse(http.responseText);
+        carregarVetor();     
     }
 
     http.send();
@@ -315,17 +317,11 @@ function startUp() {
         document.title = 'Informática';
     }
     if (idUrl == '#j') {
-        alert('outra coisa');
-        div_n1.innerHTML = '';
-        div_n2.innerHTML = '';
-        div_n3.innerHTML = '';
-        div_noticia.innerHTML = '';
-
-        // carregarVetor(data.jogos);
+        carregaJogos();
         document.title = 'Jogos';
     }
     if (idUrl == '#c') {
-        carregarVetor(data.ciencia);
+        carregaCiencia();
         document.title = 'Ciencia';
     }
     if (idUrl == '#i') {

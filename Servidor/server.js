@@ -21,9 +21,9 @@ var info = [];
 var jogos = [];
 var ciencia = [];
 
-refresh();
+refresh_info();
 
-function refresh() {
+function refresh_info() {
 
     info = [];
 
@@ -42,48 +42,78 @@ function refresh() {
             info.push({ "imagem": img, "titulo": title, "materia": feedpost, "fonte": font, "pagina": nPage });
         });
 
-        console.log('Rodando...');
+        console.log('Rodando... /info');
     });
 }
 
 setInterval(() => {
-    refresh();
+    refresh_info();
 }, 60000 * 60);
 
 app.post('/minfo', function (request, response) {
     console.log(request.link);
 });
 
-// request(/* site de jogos */, function (err, res, body) {
-//     if (err) console.log('Erro' + err);
 
-//     var $ = cheerio.load(body);
+refresh_jogos();
 
-//     $('.feed-root .feed-post-body').each(function () {
-//         var img = $(this).find('.bstn-fd-picture-image').attr('src');
-//         var title = $(this).find('.feed-post-body-title').text().trim();
-//         var feedpost = $(this).find('.feed-post-body-resumo').text().trim();
+function refresh_jogos() {
 
-//         jogos.push({ "imagem": img, "titulo": title, "materia": feedpost });
-//     });
-//     console.log('Rodando...');
-// });
+    jogos = [];
+
+    request('https://br.ign.com/', function (err, res, body) {
+        if (err) console.log('Erro' + err);
+
+        var $ = cheerio.load(body);
+
+        $('.tbl .article').each(function () {
+            var img = $(this).find('.score-wrapper img').attr('src');
+            var title = $(this).find('.m h3').text().trim();
+            var feedpost = $(this).find('.m p').text().trim();
+            var nPage = $(this).find('.score-wrapper').attr('href');
+            var font = 'IGN Brasil';
+
+            jogos.push({ "imagem": img, "titulo": title, "materia": feedpost, "fonte": font, "pagina": nPage });
+        });
+
+        console.log('Rodando... /jogos');
+    });
+}
+
+setInterval(() => {
+    refresh_jogos();
+}, 60000 * 60);
 
 
-// request(/* site de ciencia */, function (err, res, body) {
-//     if (err) console.log('Erro' + err);
+refresh_ciencia();
 
-//     var $ = cheerio.load(body);
+function refresh_ciencia() {
 
-//     $('.feed-root .feed-post-body').each(function () {
-//         var img = $(this).find('.bstn-fd-picture-image').attr('src');
-//         var title = $(this).find('.feed-post-body-title').text().trim();
-//         var feedpost = $(this).find('.feed-post-body-resumo').text().trim();
+    jogos = [];
 
-//         info.push({ "imagem": img, "titulo": title, "materia": feedpost });
-//     });
-//     console.log('Rodando...');
-// });
+    request('https://www.tecmundo.com.br/ciencia', function (err, res, body) {
+        if (err) console.log('Erro' + err);
+
+        var $ = cheerio.load(body);
+
+        $('.tec--list .tec--list__item').each(function () {
+            var img = $(this).find('.tec--card__thumb__image').attr('data-src');
+            var title = $(this).find('.tec--card__title__link').text().trim();
+            var feedpost = /* $(this).find('.m p').text().trim(); */ '.';
+            var nPage = $(this).find('.tec--card__title__link').attr('href');
+            var font = 'TECMUNDO';
+
+            ciencia.push({ "imagem": img, "titulo": title, "materia": feedpost, "fonte": font, "pagina": nPage });
+        });
+
+        console.log('Rodando... /ciencia');
+    });
+}
+
+setInterval(() => {
+    refresh_ciencia();
+}, 60000 * 60);
+
 
 
 // enviar a resposta do servidor
