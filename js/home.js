@@ -19,9 +19,11 @@ function myfunction() {
     }
 }
 
-var mybutton = document.getElementById("topBtn");
+// ------------------------
+
 
 // exibindo botão para subir após uma posição da tela
+var mybutton = document.getElementById("topBtn");
 
 function scrollFunction() {
     if (document.body.scrollTop >= 400 || document.documentElement.scrollTop >= 400) {
