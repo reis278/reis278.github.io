@@ -3,6 +3,8 @@
 var navbar = document.getElementById('navbar');
 var sticky = navbar.offsetTop;
 
+var url = "http://184.72.219.6:3000"
+
 //função ativa na rolagem do scroll
 
 window.onscroll = function () {
@@ -78,7 +80,7 @@ var json;
 function carregaInformatica() {
     // pegando a resposta do servidor
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/info', true);
+    http.open('get', `${url}/info`, true);
 
     // assim que chegar ele pega e carrega a função que chama o vetor com as noticias
     http.onload = function () {
@@ -96,7 +98,7 @@ function carregaMateriaInformatica(nId) {
     var idnoticia = nId.getAttribute('idnoticia');
 
     var http = new XMLHttpRequest();
-    http.open('post', 'http://localhost:3000/minfo', true);
+    http.open('post', `${url}/minfo`, true);
     http.send("link=" + idnoticia);
 
     window.location.href = idnoticia;
@@ -108,7 +110,7 @@ function carregaJogos() {
 
     // pegando a resposta do servidor
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/jogos', true);
+    http.open('get', `${url}/jogos`, true);
 
     // assim que chegar ele pega e carrega a função que chama o vetor com as noticias
     http.onload = function () {
@@ -124,7 +126,7 @@ function carregaJogos() {
 function carregaCiencia() {
     // pegando a resposta do servidor
     var http = new XMLHttpRequest();
-    http.open('get', 'http://localhost:3000/ciencia', true);
+    http.open('get', `${url}/ciencia`, true);
 
     // assim que chegar ele pega e carrega a função que chama o vetor com as noticias
     http.onload = function () {
